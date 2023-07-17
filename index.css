@@ -64,6 +64,9 @@ header{
     justify-content: space-between;
     padding: 0px 65px;
 }
-    
+
+.hex-codes:hover{
+    cursor: pointer;
+}
 
 

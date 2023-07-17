@@ -6,7 +6,7 @@ const renderColoursEl = document.getElementById('show-colours')
 const renderHexCodesEl = document.getElementById('hex-codes')
 let colourArray = ''
 
-//reset render divs
+
 function resetColours(){
     renderColoursEl.innerHTML = ''
     renderHexCodesEl.innerHTML = ''
@@ -21,7 +21,6 @@ function copyHex(hex){
 }
 
 
-//loop through colourArray and render hex values
 function renderColours(){
     let html = ''
     let hexHtml=''
@@ -39,7 +38,7 @@ function renderColours(){
     
 }
 
-//get color choice and scheme through API with user picked values in the fetch statement
+
 function fetchColourChoices(){
     let selectedSchemeChoice = schemeList.value
     
@@ -52,13 +51,11 @@ function fetchColourChoices(){
 }
 
 
-//Event listener for get colour scheme
 getColourSchemeBtn.addEventListener('click',function(){    
                 fetchColourChoices()
                 renderColoursEl ? resetColours() : ''            
 })
 
-//event listener for hex codes to call copyHex function
 
 document.addEventListener('click',function(e){
     if (e.target.id === "hex"){
